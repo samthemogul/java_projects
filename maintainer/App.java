@@ -28,7 +28,7 @@ class FileController {
                 // check if extension is in validExtensions list
                 if (validExtensions.contains(extension)) {
                     String extensionText = extension.substring(1);
-                    // check if file size is greater than threshold
+                    // check if file size is greater than the threshold
                     if (file.length() / 1000 > threshold) {
                         File largeFileDirectory = new File(fileObj, String.format("%s//large_%s_files/", extensionText, extensionText));
                         if(largeFileDirectory.exists()){
